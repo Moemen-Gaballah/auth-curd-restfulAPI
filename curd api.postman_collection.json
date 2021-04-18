@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "c5bbcecf-92ed-42e1-8276-74ae9053f609",
+		"name": "curd api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "moemen",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "moemengaballa@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "password_confirmation",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://passport-test.test/api/register",
+					"protocol": "http",
+					"host": [
+						"passport-test",
+						"test"
+					],
+					"path": [
+						"api",
+						"register"
+					]
+				},
+				"description": "    "
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "moemengaballa@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://passport-test.test/api/login?",
+					"protocol": "http",
+					"host": [
+						"passport-test",
+						"test"
+					],
+					"path": [
+						"api",
+						"login"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get articles",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5MzM5MDY5Yi0xZjRjLTQ0NTAtOGI4ZS1mYjMyNzk4YzEyMmMiLCJqdGkiOiJkZjk1NjhmZjE0NDBhZGQyYjNhOTlmNzk5NTYxNjhmOTI1NDJlMDIwZTgyYjg1NzllMTUxOGJmZTdlNjhkYTNiMzgyMzM1MzdjM2EyZDAyOCIsImlhdCI6MTYxODczMTMzOS4yNjM3NzIsIm5iZiI6MTYxODczMTMzOS4yNjM3NzgsImV4cCI6MTY1MDI2NzMzOS4xNzAxNSwic3ViIjoiMiIsInNjb3BlcyI6W119.gZZs0j2pCfSDuBwGGmiMLprSa157YLu0o90YTU82bJ3dYnc-BMg8S-R2JTfoOea8pavgv-BAq9R-P3HD5msLNN9e21L3pXVE_FcW6-7bj1Tu6UzVLDH4RXVUcJOjRq7w57xhqYk70llrziVkX8fDGnjec-hVDcr03S88VsywJk6826iJYe2Gs-6Skj_6w63jb_vjiIsfPBfL4IGLdf1ZgjBG1Dpn-W4bQSdl4x7C4qb-1gXXqcyam5mzOo8kuuRXhrfcG0YCvFPzagyPVVuoB9HBJHvt8IPilSP2I5ykXPSeITnufaFWnTpue0d0Xt-sHGCbcaTsfh42z99zrf4uAd-ap6lwK27ztoTa6Zv_OR9smd4rwoAk0dT2KIIxW5_2IXkGci1b8kQPAlxi79WMglEXnZY2B_8LtYLFkHHxuIta4dM_bkZLy6kcbjRMxO9o8Irs-iN5WSPDgbn9xGG6XizFh1pUHFYe2_Pi7mynCdRoLpEer_mZ9R158nNAnappw9U7_KIryK2UATLxuYWp3aEf_1kd2PaGlSvdn0imiTIiKZ4Pm2e7FFozRPDsaY1K9DVbDX-fPOpKm_FOcJHitzL7VKB-_GSVhLFJbKYFS5SE4PypzhrJXDn4XguJWU6g64mf4rRMD1KUtCvJp6d0XZjkcaRO7ieEJ0jHFlMrxRw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://passport-test.test/api/articles",
+					"protocol": "http",
+					"host": [
+						"passport-test",
+						"test"
+					],
+					"path": [
+						"api",
+						"articles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create article",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5MzM5MDY5Yi0xZjRjLTQ0NTAtOGI4ZS1mYjMyNzk4YzEyMmMiLCJqdGkiOiJkZjk1NjhmZjE0NDBhZGQyYjNhOTlmNzk5NTYxNjhmOTI1NDJlMDIwZTgyYjg1NzllMTUxOGJmZTdlNjhkYTNiMzgyMzM1MzdjM2EyZDAyOCIsImlhdCI6MTYxODczMTMzOS4yNjM3NzIsIm5iZiI6MTYxODczMTMzOS4yNjM3NzgsImV4cCI6MTY1MDI2NzMzOS4xNzAxNSwic3ViIjoiMiIsInNjb3BlcyI6W119.gZZs0j2pCfSDuBwGGmiMLprSa157YLu0o90YTU82bJ3dYnc-BMg8S-R2JTfoOea8pavgv-BAq9R-P3HD5msLNN9e21L3pXVE_FcW6-7bj1Tu6UzVLDH4RXVUcJOjRq7w57xhqYk70llrziVkX8fDGnjec-hVDcr03S88VsywJk6826iJYe2Gs-6Skj_6w63jb_vjiIsfPBfL4IGLdf1ZgjBG1Dpn-W4bQSdl4x7C4qb-1gXXqcyam5mzOo8kuuRXhrfcG0YCvFPzagyPVVuoB9HBJHvt8IPilSP2I5ykXPSeITnufaFWnTpue0d0Xt-sHGCbcaTsfh42z99zrf4uAd-ap6lwK27ztoTa6Zv_OR9smd4rwoAk0dT2KIIxW5_2IXkGci1b8kQPAlxi79WMglEXnZY2B_8LtYLFkHHxuIta4dM_bkZLy6kcbjRMxO9o8Irs-iN5WSPDgbn9xGG6XizFh1pUHFYe2_Pi7mynCdRoLpEer_mZ9R158nNAnappw9U7_KIryK2UATLxuYWp3aEf_1kd2PaGlSvdn0imiTIiKZ4Pm2e7FFozRPDsaY1K9DVbDX-fPOpKm_FOcJHitzL7VKB-_GSVhLFJbKYFS5SE4PypzhrJXDn4XguJWU6g64mf4rRMD1KUtCvJp6d0XZjkcaRO7ieEJ0jHFlMrxRw",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "test article",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "body articale",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://passport-test.test/api/articles/store",
+					"protocol": "http",
+					"host": [
+						"passport-test",
+						"test"
+					],
+					"path": [
+						"api",
+						"articles",
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit article",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5MzM5MDY5Yi0xZjRjLTQ0NTAtOGI4ZS1mYjMyNzk4YzEyMmMiLCJqdGkiOiJkZjk1NjhmZjE0NDBhZGQyYjNhOTlmNzk5NTYxNjhmOTI1NDJlMDIwZTgyYjg1NzllMTUxOGJmZTdlNjhkYTNiMzgyMzM1MzdjM2EyZDAyOCIsImlhdCI6MTYxODczMTMzOS4yNjM3NzIsIm5iZiI6MTYxODczMTMzOS4yNjM3NzgsImV4cCI6MTY1MDI2NzMzOS4xNzAxNSwic3ViIjoiMiIsInNjb3BlcyI6W119.gZZs0j2pCfSDuBwGGmiMLprSa157YLu0o90YTU82bJ3dYnc-BMg8S-R2JTfoOea8pavgv-BAq9R-P3HD5msLNN9e21L3pXVE_FcW6-7bj1Tu6UzVLDH4RXVUcJOjRq7w57xhqYk70llrziVkX8fDGnjec-hVDcr03S88VsywJk6826iJYe2Gs-6Skj_6w63jb_vjiIsfPBfL4IGLdf1ZgjBG1Dpn-W4bQSdl4x7C4qb-1gXXqcyam5mzOo8kuuRXhrfcG0YCvFPzagyPVVuoB9HBJHvt8IPilSP2I5ykXPSeITnufaFWnTpue0d0Xt-sHGCbcaTsfh42z99zrf4uAd-ap6lwK27ztoTa6Zv_OR9smd4rwoAk0dT2KIIxW5_2IXkGci1b8kQPAlxi79WMglEXnZY2B_8LtYLFkHHxuIta4dM_bkZLy6kcbjRMxO9o8Irs-iN5WSPDgbn9xGG6XizFh1pUHFYe2_Pi7mynCdRoLpEer_mZ9R158nNAnappw9U7_KIryK2UATLxuYWp3aEf_1kd2PaGlSvdn0imiTIiKZ4Pm2e7FFozRPDsaY1K9DVbDX-fPOpKm_FOcJHitzL7VKB-_GSVhLFJbKYFS5SE4PypzhrJXDn4XguJWU6g64mf4rRMD1KUtCvJp6d0XZjkcaRO7ieEJ0jHFlMrxRw",
+						"type": "text"
+					},
+					{
+						"warning": "This is a duplicate header and will be overridden by the Content-Type header generated by Postman.",
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "edit title1",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "edit body1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://passport-test.test/api/article/4/edit",
+					"protocol": "http",
+					"host": [
+						"passport-test",
+						"test"
+					],
+					"path": [
+						"api",
+						"article",
+						"4",
+						"edit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete article",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5MzM5MDY5Yi0xZjRjLTQ0NTAtOGI4ZS1mYjMyNzk4YzEyMmMiLCJqdGkiOiI3ZmEzY2IzNmM0MGE0NzE2NjZmYmU4NjFmY2JhMDc4ZmMzZGIxOGVkYmNkNTY3MWUzZjEwYTk4MTJmOTMwNjljOTk4ZTc0ZTk2ZjNlY2Q0ZiIsImlhdCI6MTYxODczNzAxMS45MDc0MiwibmJmIjoxNjE4NzM3MDExLjkwNzQyNiwiZXhwIjoxNjUwMjczMDExLjMxMDQ4Mywic3ViIjoiMiIsInNjb3BlcyI6W119.yw7OWzjTLUTu851WWJ_stzN0BaXEShvEwTWKqgoOg6wIANFSOPjuEcL3A2sjYULvHJjl4bgdUmBIPFkZytE_dvvC6Ka7aRMu15h13uu4etv8tMcl_muiX5a8xTh-5u69TzERpdA2O9zIeu0atJMmdB_zNumT6SbrVtt8FFm1BDVUVGiTniX7XJtCgMGorMvQ_qh2O36s2H9VLZy1b6ifFaHqA6Wq9maPQYoLQ7d2P4bop7BJnLgCmNUEMl5-jNXRxHp1HEILfD3KjJBvDwzlrKbntlrXDXmMZAFLcbJvyHC0VjM4lg7MdEt2orUCvPgZy2d9ffjj4crtECgrhSaNkIUi0JXsmDUUua7Tb9pMxnUAWJaMD0eYdLs0KmnPqi00SN-qrMzEW3Xtg1yemuOkO2LndB6va9AwxlRJ0cqEGx54L7W-2kfEZ6UGNy3HJ3FINjuY2RCjDLLG_Zk_cJsq6UPo3Vy7TC00EhYNQmx94VI2BvkXeKhTMTaoz03CgSiGSIReCoiSvlcgkAF7EagDBUhYtMRJSfAwwizMkih2tBGf6Aep5snHY5gmfIwur8WIvEo_OeaWZTn_zL4I0ycpEjWzS8fD1o93-E544l2KQE63lX7M3DYH3DPnEQ0I6coq5KQd3ixm3LZPzvFEk54-2z6Uck4AIFUKukzvfkUkIqI",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://passport-test.test/api/article/4/delete",
+					"protocol": "http",
+					"host": [
+						"passport-test",
+						"test"
+					],
+					"path": [
+						"api",
+						"article",
+						"4",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5MzM5MDY5Yi0xZjRjLTQ0NTAtOGI4ZS1mYjMyNzk4YzEyMmMiLCJqdGkiOiIzMTBhMjdmMTE5ZTFjMzkyYjVjNjMzZmI0Mjg3ZDRhYTQ4NjIxMzA5YTRhNWFiZWJjZDEyNWJkNjMyNTQ0OTJmYjYwY2ZkZDliNmIwYzc0YiIsImlhdCI6MTYxODczNzYzOS40NDkyMjcsIm5iZiI6MTYxODczNzYzOS40NDkyMzQsImV4cCI6MTY1MDI3MzYzOC4yMzYyMiwic3ViIjoiMyIsInNjb3BlcyI6W119.e7otqDA2tc_6FmjPWgJIVdGIhX0XYssiCU1to-xm4QRUlMOdgAAAYMkobrzGPKr4GByU7OoI0wgY8pN8K0S8mDZTDs__iXQjXfgDGx5W6ysPLWnyrLa7BNSMVUwADIunftRucPpbVtdoUYtSZwyYKRk7tNyv1EP4r9Wz_OlLU95d_AgCjeDEfpfECm7366Ifd7sDDKHkcpnKWxykFFYaP-9oD76avd6iPh6tQFnRUB-SC_cDRg0vL5d9BbH__llktes-ZSNg4HhE_Qqg4QZQagXjW14oeDERN0rfDtoXoKy9GZcI4OOAPdzLZC6NyHNVDy5a3JvJSdPzuYwwwE80fVNIxdhJtubOjIupBJTRnYJCYzoO1i0F2UJrF7Njvtn6FzQ9wQfjgtgGS_PaEXyK39KvzLQD9gGHvLZuGhGFu7Gz33XzqNxaYUN02p1NA-yVoIfKoZ9-TuYSnk8a1XbrJ5jOKPr-sIdbykKjjAIlHxIy77Yf3fCOXhgsqN2fDXgkUrQbrauvrNG0uRB33itBLQAPtFI3n8JpMz8WkZqJER_ey53m3skQJteDBPIjK1rgf1gdjPWZ5_8I79DeEiFvv75qDEgKptXKMtzINs-taJdni3WesiZTM8xfi7eNwVleJ0uIQtquyXlKlw1Q6opb3p7n3oV1Wj4z7ooVwOE0gtk",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://passport-test.test/api/logout",
+					"protocol": "http",
+					"host": [
+						"passport-test",
+						"test"
+					],
+					"path": [
+						"api",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
